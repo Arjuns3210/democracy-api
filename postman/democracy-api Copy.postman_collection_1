@@ -1,0 +1,2112 @@
+{
+	"info": {
+		"_postman_id": "33c53e98-66ce-4e8b-b99f-b0f2eeb9ac86",
+		"name": "democracy-api Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29998728"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/me",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						},
+						"description": "This is Me API.\n\nIn this API user will get the details of his/her profile.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Nikunj",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8866735663",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-04",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "user_image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/fn.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/update",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"update"
+							]
+						},
+						"description": "This is the Update API.\n\nIn this API user can update his personal details like name, phone number, state and pin code.\n\nUser will get the already existing details and then user can change the details if he wants too.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "update User Address",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Nikunj",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Mumbai",
+									"type": "text"
+								},
+								{
+									"key": "city_name",
+									"value": "Mumbai",
+									"type": "text"
+								},
+								{
+									"key": "state_name",
+									"value": "Mumbai",
+									"type": "text"
+								},
+								{
+									"key": "pin_code",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "country_name",
+									"value": "India",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/address/update",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"address",
+								"update"
+							]
+						},
+						"description": "This is the Update API.\n\nIn this API user can update his personal details like name, phone number, state and pin code.\n\nUser will get the already existing details and then user can change the details if he wants too.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/delete",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"delete"
+							]
+						},
+						"description": "This is the Delete API.\n\nIn this API user can delete his account.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9kZW1vY3JhY3ktYXBpLnRlc3RcL3dlYnNlcnZpY2VzXC92MVwvdmFsaWRhdGVfb3RwIiwiaWF0IjoxNzA2OTUxNDk1LCJleHAiOjE3MjI2NzYyOTUsIm5iZiI6MTcwNjk1MTQ5NSwianRpIjoiejR6M3JXWUVZV2UwSjlzMSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Ni1OXGUiDLPPjkyn5nbXQxLVvtSU55RZCSQGBCzALh0",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/logout",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						},
+						"description": "This is Logout API.\n\nIn this api user can logout.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "users/notification/status",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/users/notification/status",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"users",
+								"notification",
+								"status"
+							]
+						},
+						"description": "This is Users Notification status API.\n\nThis API enables or disables notifications for specific user's device."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rohit\",\r\n    \"phone\": \"123456789\",\r\n    \"message\": \"Testing data message dasdasdasfasfsd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contact/create",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contact",
+								"create"
+							]
+						},
+						"description": "This is the Contact Create API.\n\nAPI Uses: To send enquiries.\n\nIt will work with or without login.\n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contact/show",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contact",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin data",
+			"item": [
+				{
+					"name": "about",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"about\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/policies",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"policies"
+							]
+						},
+						"description": "This is the About us Api.\n\nIn this API user will get the content of \"about us\".\n\nUser will have to enter the type.\n\nType: It is the type of content the user wants.\n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "terms",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"terms\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/policies",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"policies"
+							]
+						},
+						"description": "This is the terms Api.\n\nIn this API user will get the content of \"terms and conditions\".\n\nUser will have to enter the type.\n\n**Type**: It is the type of content the user wants."
+					},
+					"response": []
+				},
+				{
+					"name": "privacy_policy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"policy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/policies",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"policies"
+							]
+						},
+						"description": "This is the Privacy Policy Api.\n\nIn this API user will get the content of \"privacy policy\".\n\nUser will have to enter the type.\n\nType: It is the type of content the user wants."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "updateFcm",
+			"item": [
+				{
+					"name": "notification_token/update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fcm_token\" : \"ZXCVBNMLKJHGFDSA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/notification_token/update",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"notification_token",
+								"update"
+							]
+						},
+						"description": "This is the Update FCM token API."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create contest answer",
+			"item": [
+				{
+					"name": "create contest answer",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contest_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "question_id[0]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "option_id[0]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "question_id[1]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "option_id[1]",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "question_id[2]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "option_id[2]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "question_id[3]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "option_id[3]",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest_answer/create",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest_answer",
+								"create"
+							]
+						},
+						"description": "This is the Update FCM token API."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "suggest question",
+			"item": [
+				{
+					"name": "suggest question",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"question\": \"Who are yousadfasdffasd?\",\r\n  \"option\": [\r\n    \"Answer 1\",\r\n    \"Answer 2\",\r\n    \"Answer 3\",\r\n    \"Answer 4\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/suggest_question",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"suggest_question"
+							]
+						},
+						"description": "This is the Update FCM token API."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "enrolled contests",
+			"item": [
+				{
+					"name": "enrolling",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contest_id\": \"389\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/enrolling",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"enrolling"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "enrolled list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9za3lvbmxpbmVycy5jb21cL2RlbW9cL2RlbW9jcmFjeS1hcGlzXC93ZWJzZXJ2aWNlc1wvdjFcL3ZhbGlkYXRlX290cCIsImlhdCI6MTcwOTcxMDc0MCwiZXhwIjoxNzI1NDM1NTQwLCJuYmYiOjE3MDk3MTA3NDAsImp0aSI6Ikg4R1N1MjNoQnhCdHhBMTkiLCJzdWIiOjE3NSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.X0LeILlpgQqE0tX91d2G3IdlaHMKeJMzviOBpczQWeY",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": \"1\",\r\n    \"paginate\": \"20\",\r\n    \"order_by\": \"pages\",\r\n    \"sort_by\": \"desc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/enrolled_contest",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"enrolled_contest"
+							]
+						},
+						"description": "This is books show api.\n\nIn this api user have to enter the id of that particular book whose details he want to fetch."
+					},
+					"response": []
+				},
+				{
+					"name": "enrolled list Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": \"1\",\r\n    \"paginate\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/enrolled_contest",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"enrolled_contest"
+							]
+						},
+						"description": "This is books show api.\n\nIn this api user have to enter the id of that particular book whose details he want to fetch."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FAQs",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/faqs/list",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"faqs",
+								"list"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/home/list",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"home",
+								"list"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "Played contest details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contest_id\": \"42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/home/contest_result_details",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"home",
+								"contest_result_details"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "contest answer details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contest_id\": \"48\",\r\n    \"answer_type\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/home/contest_answer_details",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"home",
+								"contest_answer_details"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contest",
+			"item": [
+				{
+					"name": "start_playing",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contest_id\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/start_playing",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"start_playing"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "listing",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": \"1\",\r\n    \"paginate\": \"100\",\r\n    \"contest_type\":\"win_big_this_week\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/list",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"list"
+							]
+						},
+						"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+					},
+					"response": []
+				},
+				{
+					"name": "details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "mypcot",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "1234",
+								"type": "text"
+							},
+							{
+								"key": "access-token",
+								"value": "{{bearer}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "{{AcceptLanguage}}",
+								"type": "text"
+							},
+							{
+								"key": "platform",
+								"value": "{{platform}}",
+								"description": "android or ios",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseApiUrl}}/contest/show",
+							"host": [
+								"{{baseApiUrl}}"
+							],
+							"path": [
+								"contest",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register/login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "{{AcceptLanguage}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"description": "android or ios",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"1231231234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/register_api",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"register_api"
+					]
+				},
+				"description": "This API is used to register a new user.\n\nUser will enter phone number.\n\nfcm_token -> Firebase fcm token for user device.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+			},
+			"response": []
+		},
+		{
+			"name": "validate_otp",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "{{AcceptLanguage}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\": \"6666666666\",\r\n    \"otp_code\": \"123456\",\r\n    \"fcm_token\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/validate_otp",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"validate_otp"
+					]
+				},
+				"description": "This is Validate Otp Api.\n\nUser will enter phone number, otp , wokflow and fcm_token.\n\nWorkflow => workflow will be basically the action that will be performed that is either registration or login.\n\nfcm_token => Firebase fcm token for user device.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+			},
+			"response": []
+		},
+		{
+			"name": "resend_otp",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "{{AcceptLanguage}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"description": "android or ios",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/resend_otp",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"resend_otp"
+					]
+				},
+				"description": "This is Resend Otp API.\n\nIn this API user have to enter mobile number and workflow.\n\nWorkflow => Workflow is basically the action that will be performed that is either registration or login.\n\nHEADER PARAMETERS :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+			},
+			"response": []
+		},
+		{
+			"name": "startup_api",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "{{bearer}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"description": "android or ios",
+						"type": "text"
+					},
+					{
+						"key": "version",
+						"value": "1.0.0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/startup_api",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"startup_api"
+					]
+				},
+				"description": "This API is called after registration, login with otp, login with password and whenever app is restarted.\n\nAPI Uses: To get all the navigation status, to get if app needs to be forced to update, redirection url to redirect user to update app"
+			},
+			"response": []
+		},
+		{
+			"name": "state/list",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "{{bearer}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "{{AcceptLanguage}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"description": "android or ios",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"page\": \"1\",\r\n    // \"paginate\": \"10\",\r\n    // \"order_by\": \"pages\",\r\n    // \"sort_by\": \"desc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/state/list",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"state",
+						"list"
+					]
+				},
+				"description": "This is book listing API.\n\nIn this api user will enter page, paginate, query, artist_id, language_id, book_category_id, order_by and sort_by.\n\n**page** => it is the page number.\n\n**Paginate** => It is basically the number of records to be displayed on particular screen.\n\n**query** => It is basically the book title.\n\n**artist_id** => It is guru id.\n\n**language_id** => It is the media language id.\n\nbook_category_id => It is the id for a particular book category.\n\n**Sorting:**\n\n- Alphabetically (A to Z) -> order_by: title, sort_by: asc\n- Alphabetically (Z to A) -> order_by : title, sort_by: desc\n- No. of Pages (High to Low) -> order_by : pages, sort_by: desc\n- No. of pages (Low to High) -> order_by : pages, sort_by: asc\n- Popularity -> order_by : view_count , sort_by: desc\n    \n\n**HEADER PARAMETERS** :\n\nuuid => uuid is basically Universal Unique Identifier that will have unique id for different devices on which the user will be logged in.\n\naccess-token => It is the unique token that will be generated when the user will login.\n\nAccept-Language => Basically the language that the user will select during registration.\n\nPlatform : Platform is basically the device type i.e android or ios."
+			},
+			"response": []
+		},
+		{
+			"name": "city/show",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mypcot",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "uuid",
+						"value": "1234",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "{{bearer}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "{{AcceptLanguage}}",
+						"type": "text"
+					},
+					{
+						"key": "platform",
+						"value": "{{platform}}",
+						"description": "android or ios",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state_id\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApiUrl}}/city/list",
+					"host": [
+						"{{baseApiUrl}}"
+					],
+					"path": [
+						"city",
+						"list"
+					]
+				},
+				"description": "This is books show api.\n\nIn this api user have to enter the id of that particular book whose details he want to fetch."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseApiUrl",
+			"value": "https://skyonliners.com/demo/democracy-apis/webservices/v1",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "ankita@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "123456",
+			"type": "string"
+		},
+		{
+			"key": "bearer",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9za3lvbmxpbmVycy5jb21cL2RlbW9cL2RlbW9jcmFjeS1hcGlzXC93ZWJzZXJ2aWNlc1wvdjFcL3ZhbGlkYXRlX290cCIsImlhdCI6MTcwNzM2ODQ5MCwiZXhwIjoxNzIzMDkzMjkwLCJuYmYiOjE3MDczNjg0OTAsImp0aSI6IlR0Y3cwOG9rWVJmU1dMcnAiLCJzdWIiOjExOCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.TlN0Q3kzi4_PJGoopwfT8s-xsS55gVKMyP3J5xF19Wo",
+			"type": "string"
+		},
+		{
+			"key": "AcceptLanguage",
+			"value": "en",
+			"type": "string"
+		}
+	]
+}
